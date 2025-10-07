@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Haggag | Front-End Developer (Bootstrap Fixed Navbar)</title>
+    <meta name="description" content="Mohamed Haggag's personal portfolio. Specializing in responsive front-end development (HTML, CSS). Check out my work and contact me to start your project." />
+    <link rel="icon" href="icon/318249797_1192375964964526_8841190463720610151_n.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href=" https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap " rel="stylesheet ">
+
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css ">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        /* إضافة ستايل بسيط للروابط في الـ top-bar لتكون بيضاء وواضحة */
+        
+        .top-bar a.text-white:hover {
+            color: #ccc !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar d-flex justify-content-between px-4 py-2 fixed-top" style="font-size: 0.9rem;">
+        <div class="contact-info d-flex align-items-center">
+            <a href="tel:+201142279961" class="text-white" style="text-decoration: none;">
+                <span><i class="fas fa-phone-alt me-2"></i> +20 1142279961</span>
+            </a>
+        </div>
+        <div class="social-top-bar d-flex">
+            <a href="https://www.facebook.com/?locale=ar_AR" target="_blank" title="Facebook" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/home?lang=ar" target="_blank" title="Twitter" class="text-white"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-4">
+                <a href="index.html" class="logo navbar-brand">Mohamed Haggag</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="skills.html">Skills & Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">The journey</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section py-5 text-center bg-light" style="margin-top: 100px;">
+        <div class="container">
+            <h1 class="display-4 mb-2"><i class="fas fa-layer-group me-2 text-primary"></i> معرض المشاريع</h1>
+            <p class="lead text-muted">أعمالي التي تبرز الخبرة في HTML5، CSS3، والتجاوب الكامل.</p>
+        </div>
+    </section>
+
+    <section class="section pt-5 pb-3">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="fas fa-check-circle me-2 text-success"></i> مشاريع جاهزة ومنشورة</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4" id="ready-projects-grid">
+
+                <div class="col project-item" data-category="bootstrap">
+                    <div class="card project-card-new shadow-sm" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                        <img src="imgs/Screenshot 2025-10-06 214718.png" alt="لوحة تحكم بتصميم حديث" class="card-img-top">
+                        <div class="project-details">
+                            <h5 class="card-title">لوحة تحكم (Dashboard) متقدمة</h5>
+                            <p class="card-text text-muted">واجهة إدارية شاملة باستخدام **Bootstrap 5** وإظهار البيانات.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-primary">Bootstrap</span>
+                                <span class="badge bg-secondary">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col project-item" data-category="landing">
+                    <div class="card project-card-new shadow-sm" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                        <img src="imgs/Screenshot 2025-10-06 214546.png" alt="واجهة دليل الأقصر السياحي" class="card-img-top">
+                        <div class="project-details">
+                            <h5 class="card-title">واجهة دليل الأقصر السياحي</h5>
+                            <p class="card-text text-muted">صفحة هبوط تعرض المعالم بتصميم جذاب ومتجاوب بالكامل.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-info">Landing Page</span>
+                                <span class="badge bg-secondary">HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-5 pb-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="fas fa-hourglass-half me-2 text-warning"></i> مشاريع قيد التطوير</h2>
+            <p class="text-center text-muted mb-5">مجموعة من النماذج التي نعمل على إنهائها ونشرها قريباً.</p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4" id="upcoming-projects-grid">
+
+                <div class="col project-item upcoming-project" data-category="vanilla-js">
+                    <div class="card project-card-new shadow-sm" data-bs-toggle="modal" data-bs-target="#projectModalUpcoming">
+                        <img src="imgs/Screenshot 2025-10-07 060557.png" alt="تطبيق قائمة مهام بسيط" class="card-img-top">
+                        <div class="project-details">
+                            <h5 class="card-title">تطبيق قائمة مهام (To-Do App)</h5>
+                            <p class="card-text text-muted">تطبيق يستخدم **Vanilla JavaScript** و Local Storage.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-danger">Vanilla JS</span>
+                                <span class="badge bg-warning">قريباً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col project-item upcoming-project" data-category="pure-css">
+                    <div class="card project-card-new shadow-sm" data-bs-toggle="modal" data-bs-target="#projectModalUpcoming">
+                        <img src="imgs/Screenshot 2025-10-07 060856.png" alt="معرض بوسترات بتأثيرات CSS" class="card-img-top">
+                        <div class="project-details">
+                            <h5 class="card-title">معرض صور وتأثيرات بـ CSS Grid</h5>
+                            <p class="card-text text-muted">تصميم إبداعي يعتمد على **CSS Grid** و Transitions.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-success">Pure CSS</span>
+                                <span class="badge bg-warning">قريباً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col project-item upcoming-project" data-category="bootstrap">
+                    <div class="card project-card-new shadow-sm" data-bs-toggle="modal" data-bs-target="#projectModalUpcoming">
+                        <img src="imgs/Screenshot 2025-10-07 061014.png" alt="نموذج تسجيل دخول عصري" class="card-img-top">
+                        <div class="project-details">
+                            <h5 class="card-title">نموذج تسجيل دخول عصري</h5>
+                            <p class="card-text text-muted">واجهة تسجيل/دخول أنيقة وسهلة الاستخدام.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-primary">Bootstrap</span>
+                                <span class="badge bg-warning">قريباً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col project-item upcoming-project" data-category="pure-css">
+                    <div class="card project-card-new shadow-sm" data-bs-toggle="modal" data-bs-target="#projectModalUpcoming">
+                        <img src="imgs/Screenshot 2025-10-07 061203.png" alt="واجهة متجر إلكتروني مصغر" class="card-img-top">
+                        <div class="project-details">
+                            <h5 class="card-title">واجهة متجر مصغرة (Flexbox)</h5>
+                            <p class="card-text text-muted">تصميم عرض منتجات خفيف ومُحسَّن باستخدام **CSS Flexbox**.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-success">Pure CSS</span>
+                                <span class="badge bg-warning">قريباً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section bg-dark text-white text-center py-5">
+        <div class="container">
+            <i class="fas fa-lightbulb fa-3x mb-3 text-primary"></i>
+            <h3>لنتعاون في مشروعك القادم!</h3>
+            <p>سواء كان مشروعك جاهزًا أو قيد التطوير، أنا هنا لتحويل التصميم إلى واجهة ويب حقيقية ومستجيبة.</p>
+            <a href="#" class="btn btn-lg btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+                تواصل معي الآن <i class="fas fa-headset me-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true" dir="rtl">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="contactModalLabel"><i class="fas fa-headset me-2"></i> تواصل معي</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-center">
+                    <p class="lead mb-4">يسعدني التواصل معك لأي استفسارات أو مشاريع جديدة!</p>
+
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" class="btn btn-lg btn-success w-100 mb-3">
+                        <i class="fas fa-envelope me-2"></i> **البريد (Gmail):** hjajm3842@gmail.com
+                    </a>
+
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" class="btn btn-lg btn-success w-100 mb-3">
+                        <i class="fas fa-envelope me-2"></i> **البريد 2:** mohmmedhjajj31@gmail.com
+                    </a>
+
+                    <a href="https://wa.me/201142279961" target="_blank" class="btn btn-lg w-100 mb-3" style="background-color: #25D366; border-color: #25D366; color: white;">
+                        <i class="fab fa-whatsapp me-2"></i> **واتساب:** +201142279961
+                    </a>
+
+                    <a href="tel:+201107176878" class="btn btn-lg btn-info text-white w-100 mb-3">
+                        <i class="fas fa-phone-alt me-2"></i> **رقم الهاتف 2:** +201107176878
+                    </a>
+
+                    <p class="mt-4 text-muted small">يمكنك أيضًا مراسلتي على حساباتي في وسائل التواصل الاجتماعي.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contactDetailsModal" tabindex="-1" aria-labelledby="contactDetailsModalLabel" aria-hidden="true" dir="rtl">
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Mohamed Haggag. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

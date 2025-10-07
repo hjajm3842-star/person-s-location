@@ -1,0 +1,1460 @@
+/*
+ * ملف التنسيقات المُنقَّح لصفحة index.html فقط
+ * يتضمن التنسيقات الأساسية والتنسيقات الخاصة بالأقسام التالية:
+ * 1. Top Bar & Header (شريط المعلومات وشريط التنقل)
+ * 2. Buttons (الأزرار)
+ * 3. Hero Section & News (قسم البطل والأخبار)
+ * 4. Stats Panel (الإحصائيات)
+ * 5. Value Proposition (لماذا أنا؟)
+ * 6. Core Services (الخدمات الأساسية)
+ * 7. About (من أنا)
+ * 8. Key Offerings (المهارات)
+ * 9. Featured Projects (المشاريع المميزة)
+ * 10. Testimonials (الشهادات)
+ * 11. CTA (الدعوة للعمل)
+ * 12. Footer (التذييل)
+ * 13. Media Queries (التجاوب)
+ */
+
+
+/* ==========================================================
+    0. المتغيرات والتنسيقات الأساسية
+    ========================================================== */
+
+:root {
+    --primary-color: #1a237e;
+    /* Deep Navy Blue */
+    --secondary-color: #f5f5f5;
+    /* Light Grey for backgrounds */
+    --accent-color: #ffb300;
+    /* Soft Gold/Amber */
+    --text-color: #212121;
+    --white-color: #fff;
+    --padding-section: 90px;
+    /* الظلال والتوهج */
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --neon-glow: 0 0 10px rgba(255, 179, 0, 0.7), 0 0 20px rgba(255, 179, 0, 0.4);
+    --text-neon-glow: 0 0 5px var(--accent-color);
+    /* خلفية القسم الداكن */
+    --dark-section-bg: #1e253e;
+}
+
+
+/* تنسيقات عامة موحدة */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif, 'Arial', sans-serif;
+    direction: ltr;
+    /* الاتجاه الرئيسي لـ Bootstrap */
+    text-align: left;
+    color: var(--text-color);
+    line-height: 1.8;
+    scroll-behavior: smooth;
+    background-color: var(--white-color);
+    padding-bottom: 0;
+    /* Fixed Header Fix */
+    padding-top: 125px;
+}
+
+
+/* تنسيق الأقسام الرئيسية والعناوين */
+
+.section {
+    padding: var(--padding-section) 10%;
+    text-align: left;
+    /* الافتراضي لـ LTR */
+}
+
+.section h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.primary-bg {
+    background-color: var(--secondary-color);
+}
+
+.dark-bg {
+    background-color: var(--dark-section-bg);
+    color: var(--white-color);
+}
+
+.dark-bg h2 {
+    color: var(--white-color);
+}
+
+.dark-bg h2::after {
+    background-color: var(--accent-color);
+}
+
+
+/* ==========================================================
+    1. شريط المعلومات العلوي وشريط التنقل (Top Bar & Header)
+    ========================================================== */
+
+.top-bar {
+    background-color: var(--primary-color) !important;
+    color: var(--white-color);
+    border-bottom: 2px solid var(--accent-color);
+    z-index: 1050;
+}
+
+.top-bar .contact-info i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.social-top-bar a {
+    color: var(--white-color);
+    margin-left: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-top-bar a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+header {
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-light);
+    transition: all 0.4s ease-in-out;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1040;
+}
+
+.logo {
+    font-size: 2.2em;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: color 0.3s, border-bottom 0.3s, padding-bottom 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent-color) !important;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 8px;
+}
+
+
+/* ==========================================================
+    2. تنسيق الأزرار (Buttons)
+    ========================================================== */
+
+.button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 16px 45px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.4s ease, box-shadow 0.6s ease;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 8px 15px rgba(255, 179, 0, 0.4);
+    direction: ltr;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-color: var(--primary-color);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(26, 35, 126, 0.5), var(--neon-glow);
+}
+
+.button i {
+    margin-right: 10px;
+    margin-left: -5px;
+}
+
+.button-inverted {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border-color: var(--white-color);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3);
+}
+
+.button-inverted:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-color: var(--accent-color);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(255, 179, 0, 0.7);
+}
+
+
+/* ==========================================================
+    3. قسم البطل (Hero Section) و الأخبار (News)
+    ========================================================== */
+
+.digital-news-section {
+    padding: 60px 10%;
+    background-color: #eaf0f6;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 30px;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    direction: ltr;
+    border-left: 6px solid var(--accent-color);
+    transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.news-content .news-text {
+    text-align: right;
+    /* محاذاة لليمين للنص العربي */
+    direction: rtl;
+}
+
+.news-content:hover {
+    box-shadow: var(--shadow-deep);
+    transform: translateY(-5px);
+}
+
+.news-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    flex-shrink: 0;
+    transition: transform 0.5s;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(26, 35, 126, 0.85), rgba(30, 37, 62, 0.85)), url('imgs/background-dark.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 4.5em;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    direction: ltr;
+    text-shadow: 0 0 15px rgba(255, 179, 0, 0.9), 0 0 30px rgba(255, 179, 0, 0.5);
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    color: #e3f2fd;
+    font-weight: 300;
+}
+
+
+/* ==========================================================
+    4. لوحة الإحصائيات (Stats Panel)
+    ========================================================== */
+
+.stats-panel {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, var(--dark-section-bg), #2c3a5e);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.stat-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.stat-item i {
+    font-size: 3.5em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 179, 0, 0.5);
+}
+
+.counter {
+    font-size: 3.5em;
+    font-weight: 800;
+    color: var(--white-color);
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.stat-item p {
+    color: #e0e0e0;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+    5. قسم لماذا أنا؟ (Value Proposition)
+    ========================================================== */
+
+.value-prop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.value-item {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.4s, box-shadow 0.4s;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.value-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-deep);
+}
+
+.value-item i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: color 0.4s;
+}
+
+.value-item:hover i {
+    color: var(--accent-color);
+}
+
+.value-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================
+    6. الخدمات الأساسية (Tilted Service Cards)
+    ========================================================== */
+
+.tilted-services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    perspective: 1200px;
+    flex-wrap: wrap;
+}
+
+.tilted-card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: linear-gradient(145deg, var(--primary-color), #2c3a5e);
+    color: var(--white-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-align: center;
+    direction: rtl;
+    border-right: 5px solid var(--accent-color);
+}
+
+.service-1 {
+    transform: rotateY(10deg) rotateX(5deg) translateY(0px);
+}
+
+.service-2 {
+    transform: rotateY(0deg) rotateX(0deg) translateY(-20px) scale(1.05);
+}
+
+.service-3 {
+    transform: rotateY(-10deg) rotateX(5deg) translateY(0px);
+}
+
+.tilted-card:hover {
+    transform: rotateY(0deg) rotateX(0deg) translateY(-30px) scale(1.07);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px var(--accent-color);
+    z-index: 10;
+}
+
+.tilted-card i {
+    font-size: 4em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.tilted-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.tilted-card p {
+    font-size: 1.05em;
+    color: #e0e0e0;
+}
+
+.card-tag {
+    position: relative;
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-top: 15px;
+    margin-right: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ==========================================================
+    7. قسم من أنا (About)
+    ========================================================== */
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    direction: ltr;
+    /* اتجاه المحتوى العام هنا LTR */
+}
+
+.profile-border {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    box-shadow: var(--shadow-deep);
+    transition: transform 0.5s, box-shadow 0.5s;
+    z-index: 2;
+}
+
+.profile-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: conic-gradient( var(--accent-color) 0deg, var(--accent-color) 45deg, transparent 150deg, var(--primary-color) 250deg, var(--accent-color) 360deg);
+    z-index: 1;
+    box-shadow: 0 0 5px var(--accent-color);
+    /* تم إزالة الرسوم المتحركة الأساسية لأنها غير موجودة في الكود الأصلي المرسل */
+}
+
+.profile-border::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: var(--white-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.profile-border:hover .profile-img {
+    transform: scale(1.03) rotate(-2deg);
+}
+
+.content-text {
+    flex: 1;
+    font-size: 1.2em;
+    text-align: right;
+    /* محاذاة لليمين للنص العربي */
+    direction: rtl;
+}
+
+
+/* ==========================================================
+    8. قسم المهارات (Key Offerings)
+    ========================================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background-color: var(--white-color);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--accent-color);
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-deep);
+    background-color: #fcfcfc;
+    color: var(--accent-color);
+    border-left: 5px solid var(--primary-color);
+}
+
+.skill-item i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 2em;
+    transition: color 0.4s;
+}
+
+.skill-item:hover i {
+    color: var(--accent-color);
+}
+
+
+/* ==========================================================
+    9. قسم المشاريع المميزة (Featured Projects)
+    ========================================================== */
+
+.project-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.project-card {
+    background-color: #2c3a5e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-deep);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 25px;
+    text-align: right;
+}
+
+.project-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.project-info p {
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: var(--white-color);
+    text-shadow: 0 0 5px var(--accent-color);
+}
+
+
+/* ==========================================================
+    10. قسم الشهادات والآراء (Testimonials)
+    ========================================================== */
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.testimonial-card {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    border-right: 4px solid var(--primary-color);
+    position: relative;
+    font-style: italic;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-deep);
+}
+
+.testimonial-card .quote-text {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.testimonial-card .quote-text i {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    margin-left: 10px;
+}
+
+.client-info {
+    text-align: right;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.client-name {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 5px;
+    font-style: normal;
+}
+
+.stars i {
+    color: var(--accent-color);
+    font-size: 0.9em;
+    margin-left: 2px;
+}
+
+
+/* ==========================================================
+    11. قسم الدعوة للعمل (Call to Action - CTA)
+    ========================================================== */
+
+.cta-section {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: var(--dark-section-bg);
+    border-top: 5px solid var(--accent-color);
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content i {
+    font-size: 3.5em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.cta-content h3 {
+    font-size: 2.5em;
+    color: var(--white-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cta-content p {
+    font-size: 1.1em;
+    color: #bdbdbd;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================================
+    12. التذييل (Footer)
+    ========================================================== */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 30px 10%;
+    text-align: center;
+    border-top: 3px solid var(--accent-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    direction: ltr;
+}
+
+
+/* ==========================================================
+    13. التجاوب (Media Queries)
+    ========================================================== */
+
+@media (max-width: 1050px) {
+    /* إلغاء الإمالة في الأجهزة الصغيرة للخدمات */
+    .tilted-services-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .tilted-card {
+        transform: none !important;
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .tilted-card:hover {
+        transform: translateY(-5px) scale(1.02) !important;
+        box-shadow: var(--shadow-deep);
+    }
+}
+
+@media (max-width: 992px) {
+    .section {
+        padding: 60px 5%;
+    }
+    /* 💡 التعديل المُضاف لحل مشكلة التداخل في الصفحة الرئيسية (index.html) */
+    /* زيادة الإزاحة العلوية لتجنب تداخل شريط التنقل المزدوج (Top Bar + Header) في الموبايل */
+    body {
+        padding-top: 140px;
+    }
+    /* ---------------------------------------------------------------------------------- */
+    .hero-section {
+        min-height: 70vh;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-border {
+        margin-bottom: 25px;
+    }
+    .news-content {
+        flex-direction: column;
+        text-align: center;
+        border-left: none;
+        border-top: 5px solid var(--accent-color);
+    }
+    .news-content .news-text {
+        text-align: center;
+    }
+    .value-prop-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* تنسيق الـ Stats في الموبايل */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stat-item {
+        padding: 15px;
+    }
+    .counter {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 3em;
+    }
+    .subtitle {
+        font-size: 1.4em;
+    }
+    .section h2 {
+        font-size: 2.5em;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================================
+    نهاية الكود (style.css) لصفحة index.html فقط
+    ========================================================== */
+
+
+/* ==========================================================
+    3.2 قسم من أنا (About Me Section) - NEW - ARABIC ADAPTATION
+    ========================================================== */
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    direction: rtl;
+    /* الترتيب يبدأ من اليمين (صورة يمين، نص يسار) */
+}
+
+
+/* تنسيق إطار الصورة (يبقى كما هو بغض النظر عن الاتجاه) */
+
+.profile-frame {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    padding: 10px;
+    flex-shrink: 0;
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    box-shadow: 0 0 20px rgba(26, 35, 126, 0.4);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.profile-frame:hover {
+    transform: rotate(3deg) scale(1.05);
+    /* تغيير دوران الصورة ليتناسب مع الاتجاه العربي */
+    box-shadow: 0 5px 30px rgba(255, 179, 0, 0.6);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 5px solid var(--white-color);
+}
+
+
+/* تنسيق النص */
+
+.content-text {
+    flex: 1;
+    font-size: 1.1em;
+    text-align: right;
+    direction: rtl;
+}
+
+.content-text h3 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.content-text p {
+    margin-bottom: 15px;
+}
+
+.button-secondary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.5);
+    margin-top: 15px;
+}
+
+.button-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-color: var(--accent-color);
+}
+
+
+/* التجاوب لقسم About Me */
+
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        direction: rtl;
+    }
+    .profile-frame {
+        margin-bottom: 30px;
+    }
+    .content-text {
+        text-align: right;
+    }
+    .content-text h3 {
+        /* إزالة الهامش التلقائي من اليمين في شاشة الموبايل */
+        margin-right: 0;
+    }
+}
+
+
+/* ==========================================================
+    6. قسم الخبرة والمشاريع (Experience Timeline) - ARABIC ADAPTATION
+    ========================================================== */
+
+.experience-list {
+    max-width: 800px;
+    margin: 50px auto;
+    padding-right: 20px;
+    /* تم تغيير padding-left إلى padding-right */
+    padding-left: 0;
+    position: relative;
+    border-right: 5px solid var(--primary-color);
+    /* شريط الجدول الزمني من اليمين */
+    border-left: none;
+    /* إزالة الشريط الأيسر */
+}
+
+
+/* النقطة الدائرية على الشريط الجانبي */
+
+.experience-item::before {
+    content: '\f0b1';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: -30px;
+    /* تم تغيير left إلى right */
+    left: auto;
+    top: 20px;
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    border: 3px solid var(--secondary-color);
+    z-index: 10;
+}
+
+.experience-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-right: 40px;
+    /* تم تغيير padding-left إلى padding-right */
+    padding-left: 25px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-right: 5px solid var(--accent-color);
+    /* الشريط المميز على اليمين */
+    border-left: none;
+    /* إزالة الشريط الأيسر */
+}
+
+.experience-item:hover {
+    transform: translateX(-5px);
+    /* حركة خفيفة لليسار */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* تنسيق قائمة المسؤوليات */
+
+.experience-item .responsibilities {
+    margin-top: 15px;
+    padding-left: 20px;
+    /* تم تغيير padding-right إلى padding-left */
+    padding-right: 0;
+    color: var(--text-color);
+    list-style: none;
+}
+
+.experience-item .responsibilities li {
+    position: relative;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    /* تم تغيير padding-right إلى padding-left */
+    padding-right: 0;
+    font-size: 1em;
+}
+
+
+/* إضافة أيقونة تنقيط مخصصة */
+
+.experience-item .responsibilities li::before {
+    content: '\f00c';
+    /* رمز علامة الصح */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    /* تم تغيير right إلى left */
+    right: auto;
+    color: var(--accent-color);
+    font-size: 0.9em;
+}
+
+
+/* تعديل التجاوب لهذا القسم في الموبايل */
+
+@media (max-width: 768px) {
+    .experience-list {
+        padding-right: 0;
+        border-right: none;
+    }
+    .experience-item {
+        padding-right: 20px;
+        border-right: 5px solid var(--primary-color);
+        margin-bottom: 30px;
+    }
+    .experience-item::before {
+        display: none;
+    }
+}
+
+.email-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.email-card-link:hover {
+    background-color: #f8f9fa;
+    border-color: #0d6efd;
+    box-shadow: 0 0.5rem 1rem rgba(0, 123, 255, 0.15);
+}
+
+.email-card-link:hover .email-icon,
+.email-card-link:hover .email-arrow {
+    color: #ffb300 !important;
+}
+
+
+/* تنسيق الهوفر لزر الإغلاق الجديد */
+
+.modal-body .btn-secondary:hover {
+    background-color: #ffb300;
+    /* لون رمادي أغمق */
+    border-color: #ffb300;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+
+/* ==================================== */
+
+.project-card-new {
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.project-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-new img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card-new:hover img {
+    transform: scale(1.05);
+}
+
+.project-details {
+    padding: 15px;
+    text-align: right;
+}
+
+.project-details h5 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.project-tags span {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+
+/* تمييز المشاريع القادمة بتأثير شاحب */
+
+.upcoming-project {
+    opacity: 0.6;
+    filter: grayscale(50%);
+}
+
+.upcoming-project:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+
+/* تعريف الألوان الجديدة والمتناسقة */
+
+:root {
+    --primary-bg-light: #f0f8ff;
+    /* خلفية فاتحة وأنيقة */
+    --secondary-bg-gradient: linear-gradient(135deg, #8ad4ff, #50c8ff);
+    /* تدرج أزرق فاتح */
+    --accent-color-green: #28a745;
+    /* أخضر للإنجازات */
+    --accent-color-purple: #6f42c1;
+    /* بنفسجي للمهارات */
+    --text-dark: #343a40;
+    --text-light: #f8f9fa;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* تنسيقات الأقسام الجديدة */
+
+.journey-section {
+    flex-grow: 1;
+    padding-top: 120px;
+    /* لتجنب تداخل شريط التنقل */
+    padding-bottom: 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-section h1 {
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.journey-section p.lead {
+    color: #6c757d;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+
+/* بطاقات الملخص */
+
+.summary-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.summary-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card i {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.summary-card h3 {
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* ألوان أيقونات البطاقات */
+
+.summary-card.projects i {
+    color: var(--primary-color);
+}
+
+
+/* أزرق */
+
+.summary-card.skills i {
+    color: var(--accent-color-purple);
+}
+
+
+/* بنفسجي */
+
+.summary-card.vision i {
+    color: var(--accent-color-green);
+}
+
+
+/* أخضر */
+
+
+/* تأثير الخلفية المتدرجة للزر */
+
+.cta-button {
+    background: var(--secondary-bg-gradient);
+    color: var(--text-light);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    text-decoration: none;
+    /* إزالة خط تحت الرابط */
+    display: inline-block;
+    /* ليتأثر بالـ margin-top */
+    margin-top: 30px;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 123, 255, 0.5);
+    color: var(--text-light);
+    /* لضمان بقاء لون النص أبيض عند التحويم */
+}
+
+
+/* ستايل النافذة المنبثقة للصورة */
+
+.modal-profile-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+
+/* ستايل نافذة تفاصيل التواصل */
+
+.contact-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    text-align: right;
+    border-bottom: 1px dashed #e9ecef;
+    padding-bottom: 10px;
+}
+
+.contact-detail-item i {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-left: 15px;
+    min-width: 30px;
+}
+
+.contact-detail-item p {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.contact-detail-item a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+.contact-detail-item a:hover {
+    color: #0056b3;
+}
+
+
+/* ... الكود الذي يسبقه ... */
+
+
+/* ==========================================================
+    13. التجاوب (Media Queries)
+    ========================================================== */
+
+@media (max-width: 992px) {
+    /* 💡 التعديل المُضاف لحل مشكلة التداخل في الصفحة الرئيسية (index.html) */
+    body {
+        padding-top: 140px;
+        /* زيادة الإزاحة العلوية لتجنب تداخل الشريطين في الموبايل */
+    }
+    /* ---------------------------------------------------------------------------------- */
+    /* ... (تنسيقات أخرى موجودة مسبقاً) ... */
+    /* **إضافة هذا التعديل (المشاريع)** */
+    .project-showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* عرض عمودين في الأجهزة اللوحية */
+        gap: 30px;
+    }
+    /* **إضافة هذا التعديل (الشهادات)** */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        /* عمود واحد */
+    }
+}
+
+@media (max-width: 768px) {
+    /* ... التنسيقات الموجودة مسبقاً ... */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* ... التنسيقات الموجودة مسبقاً ... */
+}
+
+@media (max-width: 576px) {
+    /* ... التنسيقات الموجودة مسبقاً ... */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    /* **تعديل/إضافة هذا التعديل (المشاريع)** */
+    .project-showcase-grid {
+        grid-template-columns: 1fr;
+        /* عمود واحد للموبايل */
+    }
+}
+
+@media (max-width: 992px) {
+    /* ... (تنسيقات أخرى) ... */
+    /* تصحيح قسم الأخبار (News Section) في التجاوب */
+    .news-content {
+        /* تحويل اتجاه المحتوى إلى عمودي (فوق بعض) */
+        flex-direction: column;
+        /* محاذاة النص في المنتصف */
+        text-align: center;
+        /* إزالة الشريط العمودي من اليمين */
+        border-right: none;
+        /* إضافة شريط أفقي في الأعلى ليحل محل العمودي */
+        border-top: 5px solid var(--accent-color);
+    }
+    .news-content .news-text {
+        /* التأكد من أن النص الداخلي يتوسط في الاتجاه العمودي */
+        text-align: center;
+    }
+    /* نهاية تصحيح الأخبار */
+    /* ... (تنسيقات أخرى) ... */
+}
+
+@media (max-width: 1050px) {
+    /* إلغاء الإمالة في الأجهزة الصغيرة للخدمات (Tilted Cards) */
+    .tilted-services-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .tilted-card {
+        transform: none !important;
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .tilted-card:hover {
+        transform: translateY(-5px) scale(1.02) !important;
+        box-shadow: var(--shadow-deep);
+    }
+}
