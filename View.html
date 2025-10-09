@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Haggag | Front-End Developer CV</title>
+    <meta name="description" content="السيرة الذاتية لمحمد حجاج، مطور واجهات أمامية بخلفية في إدارة الضيافة. يتضمن معلومات الاتصال والخبرات التقنية." />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="favicon.ico/318249797_1192375964964526_8841190463720610151_n.jpg">
+
+    <style>
+         :root {
+            --primary-color: #DC143C;
+            /* Crimson Red */
+            --primary-light: #FF6347;
+            --secondary-light: #e9ecef;
+            /* Light Gray for Bar */
+            --background-color: #fcf4f5;
+            --dark-text: #333;
+            --light-text: #fff;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--background-color);
+            color: var(--dark-text);
+        }
+        /* الشريط العلوي (مجرد شريط لوني أنيق) */
+        
+        .cv-top-bar {
+            position: relative;
+            width: 100%;
+            background-color: #4380bc;
+            /* لون أبيض مائل للرمادي الفاتح */
+            height: 27px;
+            /* شريط رفيع جدًا */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            /* ظل خفيف جداً لإضافة عمق */
+            margin-bottom: -1px;
+            /* زيادة الهامش ليعطي مساحة تنفس للصفحة */
+        }
+        /* قسم الـ Hero */
+        
+        .hero-cv {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 90px 0 70px;
+            text-align: center;
+            border-bottom: 8px solid var(--primary-light);
+            margin-bottom: 50px;
+        }
+        
+        .hero-cv h1 {
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        /* باقي التنسيقات كما هي */
+        
+        .summary-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            text-align: justify;
+            border: 1px solid var(--primary-color);
+        }
+        
+        .contact-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-color);
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        /* تنسيق الروابط داخل بطاقات الاتصال */
+        
+        .contact-card a {
+            color: var(--dark-text);
+            /* للحفاظ على لون النص أسود */
+            text-decoration: none;
+            /* لإزالة الخط تحت النص */
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        
+        .contact-card a:hover {
+            color: var(--primary-color);
+            /* تغيير اللون عند المرور لتوضيح أنه رابط */
+            text-decoration: underline;
+        }
+        
+        .tool-icon-box {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .tool-icon-box i {
+            font-size: 3.5rem;
+            color: var(--primary-light);
+        }
+        
+        .soft-skill-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-right: 3px solid var(--primary-light);
+            font-weight: 700;
+        }
+        
+        .fact-card {
+            background-color: var(--light-text);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: right;
+            border-right: 4px solid var(--primary-color);
+            min-height: 180px;
+        }
+        
+        .education-item {
+            border: 1px solid #ddd;
+            background-color: var(--light-text);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background-color: var(--dark-text) !important;
+            color: var(--light-text);
+            padding: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+
+    <div class="cv-top-bar">
+    </div>
+
+    <section class="hero-cv">
+        <div class="container">
+            <h1 class="display-2"><i class="fas fa-file-alt me-3"></i> Mohamed Haggag: Front-End Developer</h1>
+            <p class="lead fw-bold"> مطور واجهات أمامية (Junior): أسعى للانطلاق في مسيرتي التقنية، مستفيدًا من خبرتي في الخدمات اللوجستية وإدارة الأفراد لتحقيق أفضل نتائج برمجية.</p>
+        </div>
+    </section>
+
+    <section class="container" id="professional-summary">
+        <div class="summary-box">
+            <h3><i class="fas fa-lightbulb me-2"></i> الملخص الاحترافي (Professional Summary)</h3>
+            <p class="fs-5">
+                مطور واجهات أمامية متحمّس ومُصمّم على بناء تجارب ويب نظيفة، متجاوبة (Responsive)، وسهلة الاستخدام. على الرغم من تخصصي الأكاديمي في **إدارة الضيافة (Hospitality Management)**، فقد قمت بتسخير مهاراتي في **فهم احتياجات العميل** و**تنظيم سير العمل** لإنشاء
+                حلول برمجية تركز على **تجربة المستخدم (UX)**. أبحث عن تحديات جديدة لتطبيق مهاراتي في **HTML5, CSS3, و Bootstrap 5** وتحويل التصاميم إلى أكواد بصرية دقيقة.
+            </p>
+        </div>
+    </section>
+
+    <section class="container py-3" id="contact-info">
+        <h2 class="text-center mb-4"><i class="fas fa-id-card-alt me-2" style="color: var(--primary-color);"></i> معلومات الاتصال الأساسية</h2>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <div class="contact-card">
+                    <h5><i class="fas fa-envelope" style="color: #3b5998;"></i> البريد الإلكتروني (Email)</h5>
+                    <p class="detail">
+                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">hjajm3842@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="contact-card">
+                    <h5><i class="fas fa-phone-alt" style="color: #25D366;"></i> رقم الهاتف (Phone)</h5>
+                    <p class="detail">+201107176878</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="contact-card">
+                    <h5><i class="fab fa-whatsapp" style="color: #25D366;"></i> رقم الواتساب (WhatsApp)</h5>
+                    <p class="detail">
+                        <a href="https://wa.me/201142279961" target="_blank" title="اضغط للتواصل عبر واتساب أو هاتفياً">
+                            +201142279961
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5 container">
+
+    <section class="container py-5" id="key-tools">
+        <h2 class="text-center mb-5"><i class="fas fa-wrench me-2" style="color: var(--primary-color);"></i> الأدوات التقنية الرئيسية (Hard Skills)</h2>
+
+        <div class="row text-center">
+
+            <div class="col-6 col-md-3">
+                <div class="tool-icon-box">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tool-icon-box">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS3 / Flexbox</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tool-icon-box">
+                    <i class="fab fa-bootstrap"></i>
+                    <p>Bootstrap 5</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tool-icon-box">
+                    <i class="fab fa-git-alt"></i>
+                    <p>Git / GitHub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 bg-white shadow-sm" id="soft-skills">
+        <h2 class="text-center mb-5"><i class="fas fa-handshake me-2" style="color: var(--primary-color);"></i> المهارات الناعمة (Soft Skills)</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="soft-skill-item">
+                            <i class="fas fa-comments me-2" style="color: var(--primary-light);"></i> **التواصل الفعال (Communication):** قدرة عالية على نقل الأفكار التقنية بوضوح.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="soft-skill-item">
+                            <i class="fas fa-users-cog me-2" style="color: var(--primary-light);"></i> **العمل الجماعي (Teamwork):** التكيف السريع والتعاون ضمن بيئات الفريق المختلفة.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="soft-skill-item">
+                            <i class="fas fa-clock me-2" style="color: var(--primary-light);"></i> **إدارة الوقت (Time Management):** الالتزام بالمواعيد النهائية وتنظيم المهام بكفاءة.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="soft-skill-item">
+                            <i class="fas fa-headset me-2" style="color: var(--primary-light);"></i> **التركيز على العميل (Customer Focus):** تطبيق منظور الضيافة لتقديم تجربة مستخدم (UX) ممتازة.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5 container">
+
+    <section class="container py-5" id="personal-facts">
+        <h2 class="text-center mb-5"><i class="fas fa-user-circle me-2" style="color: var(--primary-color);"></i> حقائق شخصية سريعة</h2>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="fact-card">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h4>تاريخ الميلاد والعمر</h4>
+                    <p class="h5">1 يناير 2004</p>
+                    <p class="text-muted small">العمر: <span id="age">...</span> عام</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="fact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>الموقع الحالي</h4>
+                    <p class="h5">الأقصر، مصر</p>
+                    <p class="text-muted small">متاح للعمل عن بعد (Remote)</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="fact-card">
+                    <i class="fas fa-keyboard"></i>
+                    <h4>التخصص الرئيسي</h4>
+                    <p class="h5">مطور واجهات أمامية</p>
+                    <p class="text-muted small">HTML5 / CSS3 / Bootstrap</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="fact-card">
+                    <i class="fas fa-globe"></i>
+                    <h4>اللغات</h4>
+                    <p class="h5">العربية (الأم) / الإنجليزية (جيد)</p>
+                    <p class="text-muted small">لغات الكود هي لغتي المفضلة 😉</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 bg-white shadow-sm" id="education">
+        <h2 class="text-center mb-5"><i class="fas fa-book-reader me-2" style="color: var(--primary-color);"></i> الخلفية التعليمية</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="education-item text-right">
+                    <h3><i class="fas fa-hotel me-2"></i> المعهد العالي للسياحة والفنادق</h3>
+                    <p class="lead" style="color: var(--primary-light);">**التخصص: إدارة الضيافة (Hospitality Management)**</p>
+                    <p class="text-muted">
+                        <i class="far fa-calendar-alt me-2"></i> **الحالة الحالية: السنة الرابعة (4th Year)**
+                    </p>
+                    <p>هذا التخصص (إدارة الضيافة) عزز مهاراتي في **خدمة العملاء (UX)**، **التنظيم اللوجستي**، و **مهارات العرض والاتصال**، وهي مهارات أساسية لأي مطور ويب يعمل مباشرة مع العملاء وفهم احتياجاتهم بدقة.</p>
+                </div>
+
+                <div class="education-item text-right">
+                    <h3><i class="fas fa-laptop-code me-2"></i> مسارات التطوير الذاتي (Self-Study Tracks)</h3>
+                    <p class="lead" style="color: var(--primary-light);">**تطوير الويب الواجهة الأمامية (Front-End Development)**</p>
+                    <p class="text-muted"><i class="fas fa-hourglass-start me-2"></i> منذ 2025 وحتى الآن</p>
+                    <p>اعتمدت على مصادر عالمية ومحلية لتعميق فهمي في HTML5, CSS3, Bootstrap 5, والأساسيات الوظيفية لـ JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mohamed Haggag. All Rights Reserved. | Designed with passion for code and service.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        function calculateAge() {
+            // تاريخ الميلاد: 1 يناير 2004
+            const birthDate = new Date("2004-01-01");
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            document.getElementById('age').textContent = age;
+        }
+
+        window.onload = calculateAge;
+    </script>
+</body>
+
+</html>
